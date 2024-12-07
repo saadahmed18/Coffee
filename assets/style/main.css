@@ -31,6 +31,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(230, 227, 227);
 }
+img {
+  max-width: 100%;
+}
 a {
   text-decoration: none;
 }
@@ -100,19 +103,21 @@ nav ul li a:hover {
     padding: 10px 15px;
   }
 }
-.home {
-  background-image: url(../img/bg.png);
+.hero {
+  background-image: url(../images/hero.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.home .container {
+.hero .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 35px;
   height: 100vh;
 }
-.home .container .text-home h1 {
-  max-width: 500px;
+.text-hero {
+  width: 50%;
+}
+.text-hero h1 {
   margin-bottom: 15px;
   font-size: 50px;
   font-weight: 700;
@@ -120,31 +125,35 @@ nav ul li a:hover {
   line-height: 1.6;
   color: var(--main-color);
 }
-.home .container .text-home p {
-  max-width: 530px;
+.text-hero p {
   line-height: 1.8;
   color: white;
 }
-.home .container .text-home a {
-  display: inline-block;
+.hero .container .text-hero a {
+  display: block;
   text-align: center;
   width: 150px;
-  background-color: var(--main-color);
   padding: 10px;
-  border-radius: 4px;
   margin-top: 20px;
-  border: 1px solid var(--main-color);
+  border-radius: 4px;
   color: white;
+  background-color: var(--main-color);
 }
-.home .container .text-home a:hover {
+.hero .container .text-hero a:hover {
   background-color: #6c543b;
   border-color: #6c543b;
 }
-.home .container img {
-  width: 480px;
+.image {
+  width: 50%;
 }
-/* End-home */
-/* Start-about */
+@media (max-width:991px) {
+  .text-hero {
+    width: 100%;
+  }
+  .image {
+    display: none;
+  }
+}
 .about-us .container {
   display: flex;
   justify-content: space-between;
@@ -180,8 +189,6 @@ nav ul li a:hover {
   background-color: #6c543b;
   border-color: #6c543b;
 }
-/* End-about */
-/* Start-products */
 .products .container {
   padding-top: 100px;
 }
@@ -244,8 +251,6 @@ nav ul li a:hover {
   background-color: var(--main-color);
   color: white;
 }
-/* End-products */
-/* Start-our-customers */
 .our-customers .title {
   width: 100%;
   text-align: center;
@@ -311,14 +316,11 @@ nav ul li a:hover {
   height: 130px;
   border-radius: 50%;
 }
-/* End-our-customers */
-/* End-main */
 footer .container {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
-  /* background-color: brown; */
 }
 footer .container h3 {
   padding-bottom: 10px;
