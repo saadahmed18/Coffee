@@ -1,14 +1,31 @@
-:root {
-  --main-color: #bc9667;
-  --second-color: #1b1b1b;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
+:root {
+  --main-color: #bc9667;
+  --second-color: #1b1b1b;
   scroll-behavior: smooth;
+}
+.container {
+  margin: auto;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -21,21 +38,27 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  padding: 20px 0;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
 }
 .logo {
   width: 100px;
 }
+nav {
+  position: relative;
+}
+nav input {
+  appearance: none;
+}
 nav ul {
-  display: flex;
   list-style: none;
 }
 nav ul li a {
+  display: block;
   font-size: 18px;
   font-weight: 700;
   padding: 0 15px;
@@ -53,9 +76,31 @@ nav ul li a:hover {
 .icons i:hover {
   color: var(--main-color);
 }
-
+@media (min-width: 992px) {
+  nav label,
+  nav input {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+  }
+}
+@media (max-width: 991px) {
+  nav input:checked + ul {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.094);
+  }
+  nav ul li a {
+    padding: 10px 15px;
+  }
+}
 .home {
-  min-height: 100vh;
   background-image: url(../img/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -319,28 +364,4 @@ footer .container .contact i {
   margin-top: 20px;
   background-color: #d8c1a4;
   height: 60px;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 950px;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
