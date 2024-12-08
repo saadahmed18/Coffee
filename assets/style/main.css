@@ -110,12 +110,14 @@ nav ul li a:hover {
 }
 .hero .container {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 35px;
   height: 100vh;
 }
 .text-hero {
   width: 50%;
+  flex-grow: 1;
 }
 .text-hero h1 {
   margin-bottom: 15px;
@@ -132,7 +134,7 @@ nav ul li a:hover {
 .text-hero a {
   display: block;
   width: 150px;
-  margin-top: 20px;
+  margin: 20px auto auto auto;
   padding: 10px;
   text-align: center;
   border-radius: 4px;
@@ -163,7 +165,6 @@ nav ul li a:hover {
 }
 .about-us .container {
   display: flex;
-  justify-content: center;
   gap: 35px;
 }
 .about-us .image {
@@ -172,8 +173,11 @@ nav ul li a:hover {
 }
 .text-about-us {
   width: 50%;
+  flex-grow: 1;
 }
-.about-us .container .text-about-us h2 {
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
   text-transform: uppercase;
   font-size: 35px;
   color: var(--second-color);
@@ -186,6 +190,7 @@ nav ul li a:hover {
 .about-us .container .text-about-us a {
   display: block;
   width: 150px;
+  margin: auto;
   padding: 10px;
   text-align: center;
   border: 1px solid var(--main-color);
@@ -200,25 +205,22 @@ nav ul li a:hover {
 .products {
   padding: 75px 0;
 }
-.products .container h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  font-size: 35px;
-  color: var(--second-color);
-}
 .products .products-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 35px;
 }
 .products-list .product {
   flex-basis: 350px;
+  flex-grow: 1;
   padding: 15px;
   text-align: center;
   border-radius: 8px;
   background-color: white;
+}
+.product .product-image {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.083);
 }
 .products img {
   width: 220px;
@@ -261,76 +263,43 @@ nav ul li a:hover {
   background-color: var(--main-color);
   color: white;
 }
-.our-customers .title {
-  width: 100%;
-  text-align: center;
-  padding-top: 100px;
-  font-size: 40px;
-  text-transform: uppercase;
-  font-size: 35px;
-  color: var(--second-color);
+.our-customers {
+  padding: 75px 0;
 }
-.our-customers .container {
+.our-customers .customers-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
 }
-
-.our-customers .container .our-customer-in-egypt {
+.customers-list .customer {
+  flex-basis: 350px;
+  flex-grow: 1;
+  padding: 30px;
   text-align: center;
-  padding: 50px;
   border-radius: 8px;
   background-color: white;
-  margin: 0 20px;
 }
-.our-customers .container .our-customer-in-egypt:hover {
-  background-color: #e0d7c5;
-}
-.our-customers .container .our-customer-in-morocco {
-  text-align: center;
-  padding: 50px;
-  border-radius: 8px;
-  margin: 0 20px;
-  background-color: white;
-}
-.our-customers .container .our-customer-in-morocco:hover {
-  background-color: #e0d7c5;
-}
-.our-customers .container .our-customer-in-palestine {
-  text-align: center;
-  padding: 50px;
-  border-radius: 8px;
-  background-color: white;
-  margin: 0 20px;
-}
-.our-customers .container .our-customer-in-palestine:hover {
-  background-color: #e0d7c5;
-}
-.our-customers .container .icons-star {
-  display: inline-block;
+.icons-star {
+  margin-bottom: 25px;
   color: gold;
-  padding-bottom: 20px;
 }
-.our-customers .container p {
-  max-width: 500px;
-  line-height: 1.6;
-  padding-bottom: 15px;
+.customer p {
+  margin-bottom: 20px;
+  line-height: 25px;
 }
-.our-customers .container h3 {
-  padding-bottom: 15px;
+.customer h3 {
+  margin-bottom: 20px;
 }
-.our-customers .container img {
+.customers-list .customer img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
 }
+
 footer .container {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 footer .container h3 {
   padding-bottom: 10px;
