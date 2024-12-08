@@ -129,7 +129,7 @@ nav ul li a:hover {
   line-height: 1.8;
   color: white;
 }
-.hero .container .text-hero a {
+.text-hero a {
   display: block;
   text-align: center;
   width: 150px;
@@ -139,14 +139,18 @@ nav ul li a:hover {
   color: white;
   background-color: var(--main-color);
 }
-.hero .container .text-hero a:hover {
+.text-hero a:hover {
   background-color: #6c543b;
   border-color: #6c543b;
 }
 .image {
   width: 50%;
 }
-@media (max-width:991px) {
+@media (max-width: 991px) {
+  .text-hero h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
   .text-hero {
     width: 100%;
   }
@@ -154,15 +158,20 @@ nav ul li a:hover {
     display: none;
   }
 }
+.about-us {
+  padding: 75px 0;
+}
 .about-us .container {
   display: flex;
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  justify-content: center;
+  gap: 35px;
 }
-.about-us .container img {
-  width: 580px;
+.about-us .image {
+  width: 50%;
   border-radius: 8px;
+}
+.text-about-us {
+  width: 50%;
 }
 .about-us .container .text-about-us h2 {
   text-transform: uppercase;
@@ -170,20 +179,19 @@ nav ul li a:hover {
   color: var(--second-color);
 }
 .about-us .container .text-about-us p {
-  max-width: 400px;
   line-height: 1.4;
   padding: 10px 0;
   color: var(--second-color);
 }
 .about-us .container .text-about-us a {
-  display: inline-block;
-  text-align: center;
+  display: block;
   width: 150px;
-  background-color: var(--main-color);
+  text-align: center;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid var(--main-color);
   color: white;
+  background-color: var(--main-color);
 }
 .about-us .container .text-about-us a:hover {
   background-color: #6c543b;
