@@ -117,7 +117,6 @@ nav ul li a:hover {
 }
 .text-hero {
   width: 50%;
-  flex-grow: 1;
 }
 .text-hero h1 {
   margin-bottom: 15px;
@@ -134,7 +133,7 @@ nav ul li a:hover {
 .text-hero a {
   display: block;
   width: 150px;
-  margin: 20px auto auto auto;
+  margin-top: 20px;
   padding: 10px;
   text-align: center;
   border-radius: 4px;
@@ -155,6 +154,10 @@ nav ul li a:hover {
   }
   .text-hero {
     width: 100%;
+    text-align: center;
+  }
+  .text-hero a {
+    margin: 20px auto auto auto;
   }
   .image {
     display: none;
@@ -173,7 +176,15 @@ nav ul li a:hover {
 }
 .text-about-us {
   width: 50%;
-  flex-grow: 1;
+}
+@media (max-width: 991px) {
+  .text-about-us {
+    width: 100%;
+    text-align: center;
+  }
+  .text-about-us a {
+    margin: auto;
+  }
 }
 h2 {
   text-align: center;
@@ -182,15 +193,14 @@ h2 {
   font-size: 35px;
   color: var(--second-color);
 }
-.about-us .container .text-about-us p {
+.text-about-us p {
   line-height: 1.4;
   padding: 10px 0;
   color: var(--second-color);
 }
-.about-us .container .text-about-us a {
+.text-about-us a {
   display: block;
   width: 150px;
-  margin: auto;
   padding: 10px;
   text-align: center;
   border: 1px solid var(--main-color);
@@ -198,7 +208,7 @@ h2 {
   color: white;
   background-color: var(--main-color);
 }
-.about-us .container .text-about-us a:hover {
+.text-about-us a:hover {
   background-color: #6c543b;
   border-color: #6c543b;
 }
