@@ -310,24 +310,39 @@ h2 {
 footer .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 35px;
 }
-footer .container h3 {
+footer h3 {
   padding-bottom: 10px;
 }
-footer .container .coffee-shop p {
-  max-width: 300px;
+.coffee-shop,
+.support,
+.view-guides,
+.contact {
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+@media (max-width: 991px) {
+  .coffee-shop,
+  .support,
+  .view-guides,
+  .contact {
+    text-align: center;
+  }
+}
+footer .coffee-shop p {
   line-height: 1.6;
 }
-footer .container a {
+footer a {
   display: block;
   padding: 3px 0;
   color: #1b1b1b;
 }
-footer .container a:hover {
+footer a:hover {
   color: #bc9667;
 }
-
-footer .container .coffee-shop i {
+footer .coffee-shop i {
   display: inline-block;
   width: 50px;
   padding: 5px 0;
@@ -341,10 +356,10 @@ footer .container .coffee-shop i {
 footer .container .coffee-shop i:hover {
   color: #bc9667;
 }
-footer .container .contact p {
+footer .contact p {
   padding: 5px 0;
 }
-footer .container .contact i {
+footer .contact i {
   display: inline-block;
   padding-right: 15px;
 }
